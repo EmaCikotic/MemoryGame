@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RULES OF THE GAME</title>
+    <link rel="stylesheet" href="rules.css" />
+    <script
+      src="https://kit.fontawesome.com/6a6b98a654.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--for the icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Fredericka+the+Great&family=Holtwood+One+SC&family=Orbitron&family=Press+Start+2P&family=Rubik+Pixels&family=Smythe&family=Source+Code+Pro:wght@300&family=Tilt+Prism&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--onload so when u open the page the animation starts -->
+  <body onload="typingAnimation()">
+    <script src="rules.js"></script>
+
+    <!-- first audio -->
+    <audio id="typingSound" autoplay>
+      <source src="first.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- second audio -->
+    <audio id="typingSound2">
+      <source src="second.mp3" type="audio/mp3" />
+    </audio>
+
+    <a href="index.html"
+      ><i class="fa-solid fa-arrow-down arrow fa-rotate-90"></i
+    ></a>
+    <!--https://fontawesome.com/search?c=social&o=r-->
+
+    <!--the paragraph (the whole) was written by chatGPt-->
+    <div id="container">
+      <div id="textContainer">
+        <p id="beginning"><!--text in js--></p>
+      </div>
+
+      <div id="decision">
+        <!--when u click YES the second animation starts-->
+        <button id="yes"><a onclick="typingAnimation2()">Yes</a></button>
+        <button id="no"><a href="index.html">No</a></button>
+      </div>
+
+      <p id="main">
+        <!--text in js-->
+      </p>
+
+      <div id="playContainer">
+        <button id="play"><a href="game.html">Challenge accepted</a></button>
+      </div>
+    </div>
+  </body>
+</html>

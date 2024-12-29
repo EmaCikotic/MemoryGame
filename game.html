@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE MEMORY GAME</title>
+    <link rel="stylesheet" href="game.css" />
+    <script
+      src="https://kit.fontawesome.com/6a6b98a654.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- for the icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Fredericka+the+Great&family=Holtwood+One+SC&family=Orbitron&family=Press+Start+2P&family=Source+Code+Pro:wght@300&family=Tilt+Prism&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response -->
+    <!--i added this because i was getting some error in the console and i couldnt check if the functions are being applied -->
+    <link rel="shortcut icon" href="#" />
+
+    <!--from google fonts-->
+  </head>
+  <body>
+    <!-- AUDIO -->
+    <!-- links for audio: https://mixkit.co/free-sound-effects/game-over/
+    https://elements.envato.com/ -->
+    <audio id="loser">
+      <source src="mixkit-sad-game-over-trombone-471.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="winner">
+      <source
+        src="YL5CCTQ-congratulations-youre-a-winner(1).mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <a href="index.html"
+      ><i class="fa-solid fa-arrow-down fa-rotate-90 arrow"></i
+    ></a>
+    <!--https://fontawesome.com/search?c=social&o=r -->
+
+    <p id="time">TIME REMAINING</p>
+
+    <p id="timer"></p>
+
+    <!--helped myself with this section in w3schools for designing the matrix
+    https://www.w3schools.com/css/css_grid.asp
+    https://www.w3schools.com/css/css_grid_container.asp-->
+
+    <div class="playground">
+      <!-- FIRST ROW -->
+      <div class="item" data-icons="css">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-css3-alt icon4 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="stackoverflow">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-stack-overflow icon2 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="apple">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-apple icon1 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="html">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-html5 icon5 fa-3x"></i>
+        </div>
+      </div>
+      <!-- SECOND ROW -->
+
+      <div class="item" data-icons="google">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-google icon6 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="codeCamp">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-free-code-camp icon7 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="code">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-solid fa-code icon8 fa-3x"> </i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="stackoverflow">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-stack-overflow icon2 fa-3x"></i>
+        </div>
+      </div>
+      <!-- THIRD ROW -->
+
+      <div class="item" data-icons="java">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-java icon3 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="html">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-html5 icon5 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="codeCamp">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-free-code-camp icon7 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="google">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-google icon6 fa-3x"></i>
+        </div>
+      </div>
+      <!-- FORTH ROW -->
+      <div class="item" data-icons="code">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-solid fa-code icon8 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="apple">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-apple icon1 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="css">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-css3-alt icon4 fa-3x"></i>
+        </div>
+      </div>
+
+      <div class="item" data-icons="java">
+        <div class="front">
+          <i class="fa-solid fa-question fronticon fa-3x"></i>
+        </div>
+        <div class="back">
+          <i class="fa-brands fa-java icon3 fa-3x"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

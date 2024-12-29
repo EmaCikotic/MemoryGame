@@ -1,0 +1,61 @@
+body {
+  display: flex; /*so i was able to align them */
+  flex-direction: column;
+  justify-content: center; /*vertical axis*/
+  align-items: center; /*horizontal axis*/
+  height: 100%;
+  width: 100%;
+  background-color: #a69cac;
+}
+
+h1 {
+  margin-top: 5em;
+  color: #161b33;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 4em;
+  text-shadow: 0px 0px 9px black;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: row;
+}
+
+#play {
+  padding-right: 3em;
+}
+
+#play a,
+#HowTo a {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 1.6em;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #161b33;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 10%;
+}
+
+#play,
+#HowTo {
+  animation: bounce 1.5s infinite;
+}
+
+#play a:hover,
+#HowTo a:hover {
+  box-shadow: 0px 0px 9px black;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
