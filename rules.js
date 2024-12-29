@@ -1,4 +1,3 @@
-//TYPING ANIMATIONS: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 // THE FIRST TYPING ANIMATION
 
 var i = 0;

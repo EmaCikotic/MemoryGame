@@ -58,14 +58,6 @@ function pauseAudio2() {
 
 //THE GAME
 
-// helped myself with this video https://youtu.be/ZniVgo8U7ek
-// i had the point done already (its still very similar, like just few conditions have to be checked),
-//the things I added from this was:
-//in the shuffle the function  wrapped in the () so the function starts immediately when the player
-//enters the game
-//and the data-icons="" to match them, i had done something with (div i) but it didnt work
-//and some things for css like how to place two icons on top of eachother (positions) and  backface-visibility: hidden;
-
 let hasBeenFlipped = false;
 let firstCard, secondCard;
 let lockPlayground = false;
